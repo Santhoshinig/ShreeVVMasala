@@ -8,7 +8,7 @@ const LoadingScreen = () => {
         >
             {/* Centered, compact video — dark BG of video blends with black page */}
             <motion.video
-                src="/L5.mp4"
+                src="/L7.mp4"
                 autoPlay
                 loop
                 muted
@@ -16,11 +16,7 @@ const LoadingScreen = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                style={{
-                    width: '70vw',
-                    height: '70vh',
-                    objectFit: 'contain',
-                }}
+                className="w-full max-w-[280px] md:max-w-[400px] h-auto bg-transparent outline-none pointer-events-none"
             />
 
             {/* Tagline */}

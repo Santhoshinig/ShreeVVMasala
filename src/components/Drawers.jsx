@@ -75,7 +75,7 @@ export const CartDrawer = () => {
                                                 </div>
                                                 <div className="flex justify-between items-end mt-4">
                                                     <span className="text-sm text-stone-500 font-medium">Qty: <span className="text-stone-900 font-bold">{item.quantity}</span></span>
-                                                    <span className="font-black text-maroon font-serif text-lg">₹{(price * item.quantity).toFixed(2)}</span>
+                                                    <span className="font-black text-maroon font-sans text-xl tracking-tight">₹{(price * item.quantity).toFixed(2)}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@ export const CartDrawer = () => {
                             <div className="border-t border-stone-100 p-6 bg-stone-50 space-y-4">
                                 <div className="flex justify-between items-center text-lg font-bold">
                                     <span className="text-stone-600">Subtotal</span>
-                                    <span className="text-stone-900 font-serif text-2xl">₹{total.toFixed(2)}</span>
+                                    <span className="text-stone-900 font-sans font-black tracking-tight text-2xl">₹{total.toFixed(2)}</span>
                                 </div>
                                 <p className="text-xs text-stone-500">Tax included. Shipping calculated at checkout.</p>
                                 <button className="w-full bg-[#111] text-white font-black text-sm tracking-widest uppercase py-4 rounded-full hover:bg-black transition-colors flex items-center justify-center gap-2 group">
@@ -156,7 +156,7 @@ export const WishlistDrawer = () => {
                                         </div>
                                         <div className="flex-1 flex flex-col justify-center py-1">
                                             <h3 className="font-bold text-stone-800 leading-tight mb-2 pr-8">{item.name}</h3>
-                                            <span className="font-black text-maroon font-serif text-lg">₹{item.price.toFixed(2)}</span>
+                                            <span className="font-black text-maroon font-sans text-xl tracking-tight">₹{item.price.toFixed(2)}</span>
                                         </div>
                                         <button
                                             onClick={(e) => { e.stopPropagation(); toggleWishlist(item); }}
