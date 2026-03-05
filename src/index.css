@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #7A1C1C;
+  --color-gold: #C9A227;
+  --color-turmeric: #E8A317;
+  --color-brown-dark: #3D1F1F;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-glow: shadow-glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shadow-glow {
+    from {
+      box-shadow: 0 0 5px rgba(201, 162, 39, 0.2);
+    }
+
+    to {
+      box-shadow: 0 0 20px rgba(201, 162, 39, 0.6);
+    }
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans bg-stone-50 text-stone-900 overflow-x-hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(122, 28, 28, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #7A1C1C 0%, #3D1F1F 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C9A227 0%, #E8A317 100%);
+}
+
+.text-gold-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #C9A227 0%, #E8A317 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-stone-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-maroon rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brown-dark;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
